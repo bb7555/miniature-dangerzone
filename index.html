@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Angular Timer, a simple, inter-operable AngularJS directive</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link rel="stylesheet" href="css/experiment-styles.css" />
+
+    <link rel="stylesheet" href="css/experiment.css" /> 
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+    <link href="/bower_components/bootstrap/dist/css/bootstrap-responsive.css" rel="stylesheet"/>
+    <link href="docs/css/docs.css" rel="stylesheet"/>
+    <link href="docs/css/prettify.css" rel="stylesheet"/>
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="dist/angular-timer.min.js"></script>
+    <script src="docs/docs.js"></script>
+    <script src="js/experiment.js"></script> 
+    <style type="text/css">
+
+
+    </style>
+</head>
+<body ng-app="timer-demo" ng-controller="TimerDemoController">
+
+<div class="container page-content">
+
+<section id="timer-with-start-time">
+    <h3>
+        All time in set to GMT and digital time in 24 hr format</h3>
+
+    
+        
+        <h3>
+            <timer start-time="1"><span id="dataEl" data-hours="{{hours}}" data-minutes="{{minutes}}" data-seconds="{{seconds}}"></span>{{hours}}:{{minutes}}::{{seconds}}</timer>
+        </h3>
+<a href="#clock"><button id="start" class="btn" type="button">View Analog Clock</button></a>
+ <button class="btn" id="openBonus">Open Bonus Points</button>
+    <span id="bonusPoints">
+        <button id="status" class="btn" onclick="stopResumeTimer('timer-with-start-time', this)" type="button">Stop</button>
+        <select id="alarm"><option>Set Alarm</option><option value="10">10 Seconds from now</option><option>1 minute from now</option></select> 
+    </span>
+
+</section>
+
+       
+        <div id="experiment">
+            
+            <div id="clock">
+                <div id="hour"><img src="images/hourHand.png" /></div>
+                <div id="minute"><img src="images/minuteHand.png" /></div>
+                <div id="second"><img src="images/secondHand.png" /></div>
+            </div>
+        </div>
+</div>
+    
+</body>
+</html>
